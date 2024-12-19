@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details List</title>
+</head>
+<body>
+    <h1>Student Details List</h1>
+
+    <!-- Display list of students -->
+    <% if (students.length > 0) { %>
+        <ul>
+            <% students.forEach(student => { %>
+                <li>
+                    <strong>Name:</strong> <%= student.name %> |
+                    <strong>DOB:</strong> <%= student.dob %> |
+                    <strong>Age:</strong> <%= student.age %> |
+                    <strong>Roll No:</strong> <%= student.rollNo %> |
+                    <strong>Year:</strong> <%= student.year %> |
+                    <strong>Course:</strong> <%= student.course %> |
+                    <strong>Phone:</strong> <%= student.phoneNo %> |
+                    <strong>Email:</strong> <%= student.email %>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No student details available.</p>
+    <% } %>
+
+    <br>
+    <a href="/">Go Back to Form</a>
+</body>
+</html>
